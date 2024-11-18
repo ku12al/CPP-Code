@@ -3,6 +3,8 @@
 using namespace std;
 
 
+
+
 int asciiVal(char chr){
       return (int)chr;
 
@@ -23,19 +25,32 @@ string consonantansvowel(string& str){
 }
 
 int main(){
-      int n;
-      cin>>n;
+      // int n;
+      // cin>>n;
+
+      // string str;
+      // cin>>str;
+
+      // int p;
+      // cin>>p;
+      // // cout<<consonantansvowel(str)<<endl;
+      // if (p >= 0 && p < str.size()) {
+      //   cout << asciiVal(str[p]) << endl;
+      // } else {
+      //   cout << "Index out of bounds" << endl;
+      // }
+
 
       string str;
-      cin>>str;
+      getline(std::cin, str);
 
-      int p;
-      cin>>p;
-      // cout<<consonantansvowel(str)<<endl;
-      if (p >= 0 && p < str.size()) {
-        cout << asciiVal(str[p]) << endl;
-      } else {
-        cout << "Index out of bounds" << endl;
+      string ans = "";
+      for(char ch: str){
+            if(ch == ' '){
+                  continue;
+            }
+            ans+=ch;
       }
+      cout<<ans<<endl;
       return 0;
 }
